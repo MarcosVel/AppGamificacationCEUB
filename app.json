@@ -1,7 +1,7 @@
 {
     "expo": {
-        "name": "Be The Hero",
-        "slug": "bethehero",
+        "name": "ePlay",
+        "slug": "eplay",
         "platforms": [
             "ios",
             "android",
@@ -9,11 +9,11 @@
         ],
         "version": "1.0.0",
         "orientation": "portrait",
-        "icon": "./assets/icon.png",
+        "icon": "./assets/icon4att.png",
         "splash": {
-            "image": "./assets/splash.png",
+            "image": "./assets/splashCeub3.png",
             "resizeMode": "contain",
-            "backgroundColor": "#E02041"
+            "backgroundColor": "#220536"
         },
         "updates": {
             "fallbackToCacheTimeout": 0

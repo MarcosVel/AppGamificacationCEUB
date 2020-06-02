@@ -1,0 +1,35 @@
+ANTIGOS CÓDIGOS FUNCIONANDO MAS QUE  MELHORAMOS
+
+imgperfil: {
+       width: 120,
+       height: 120,
+       //flexDirection: 'row',
+       alignSelf: 'flex-start',
+       //marginLeft: 20,
+       //margin: 'auto',
+       //resizeMode: "contain",
+       //alignSelf: 'center',    
+       borderWidth: 1,
+       borderRadius: 60,           
+       //overflow: "hidden",
+       borderWidth: 2,
+       borderColor: "#F0CC25"
+    },
+
+
+    deu certo no MI 9T Pro e no PIXEL 2 // mas errado no cel do Lucas
+    imgperfil: {
+       width: '29%',
+       height: '140%',
+       //flexDirection: 'row',
+       alignSelf: 'flex-start',
+       //marginLeft: 20,
+       //margin: 'auto',
+       //resizeMode: "contain",
+       //alignSelf: 'center',    
+       borderWidth: 1,
+       borderRadius: 60,           
+       //overflow: "hidden",
+       borderWidth: 2,
+       borderColor: "#F0CC25"
+    },
