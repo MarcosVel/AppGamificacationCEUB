@@ -4,12 +4,11 @@ import {
     View,
     FlatList,
     Image,
+    StyleSheet,
 
 } from 'react-native';
 
-import styles from './style';
-
-export default class Ticket extends React.Component {
+export default class RankingList2 extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -21,13 +20,13 @@ export default class Ticket extends React.Component {
         return (
             <View>
                 <Image style={styles.imgUsuRank}
-                    source={{ url: item.image }}
-                />          {/*acima... renderização da imagem do participante no ranking */}
+                    source={{ uri: item.image }}
+                />          
                 <View>
-                    <Text>  {/* renderização do nome do participante no ranking */}
+                    <Text>  
                         {item.name}
                     </Text>
-                    <Text>  {/* renderização da posição do participante no ranking */}
+                    <Text> 
                         {item.position}
                     </Text>
                 </View>
@@ -36,14 +35,14 @@ export default class Ticket extends React.Component {
     }
 
     componentDidMount() {
-        const url = 'https://next.json-generator.com/api/json/get/4kVH1lth_'
+        const url = 'http://www.json-generator.com/api/json/get/ccLAsEcOSq?indent=1'
 
         fetch(url)
             .then((response) => response.json())
             .then((responseJson) => {
                 this.setState({
                     dataSource: responseJson.ranking_array
-                }); {/* renderização do array de ranking */ }
+                })
             })
             .catch((error) => {
                 console.log(error)
@@ -55,9 +54,30 @@ export default class Ticket extends React.Component {
             <View style={styles.container}>
                 <FlatList
                     data={this.state.dataSource}
+                    keyExtractor={(item, index) => index.toString()}
                     renderItem={this.renderItem}
                 />
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,        
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    
+    textPage: {
+        fontSize: 30,
+        color: '#220536',
+        textAlign: 'center'
+    },
+
+    imgUsuRank: {
+        width: 100,
+        height: 100,
+    },
+
+});

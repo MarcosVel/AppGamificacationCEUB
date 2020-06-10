@@ -72,7 +72,7 @@ export default StyleSheet.create({
     profile: {
         fontSize: 25,
         fontFamily: 'Roboto',
-        color: '#675074',            
+        color: '#856894',          
         marginLeft: 10,
         marginTop: 0.9,
     },   

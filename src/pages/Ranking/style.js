@@ -15,8 +15,12 @@ export default StyleSheet.create({
     // },
     //header 
     box1: { 
-        flex: 0.065, 
+        flex: 0.6, 
         backgroundColor: '#220536', 
+    },
+    box2: { 
+        flex: 9, 
+        backgroundColor: '#fff', 
     },
 
     //CRIADO POR NÓS
@@ -55,11 +59,11 @@ export default StyleSheet.create({
         marginTop: 2.2,     
     },
 
-    //escrito Perfil
+    //escrito Ranking
     profile: {
         fontSize: 25,
         fontFamily: 'Roboto',
-        color: '#675074',            
+        color: '#856894', //'#675074',            
         marginLeft: 10,
         marginTop: 0.9,
     },
@@ -69,4 +73,9 @@ export default StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center'
     },
+
+
+
+    //parte do Ranking
+
 });

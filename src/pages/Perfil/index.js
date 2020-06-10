@@ -30,12 +30,12 @@ export default function Perfil () {
                         {/* <TouchableOpacity style={styles.effecticons} onPress={() => {}}>
                             <Icon style={[styles.menu]} name="menu" size={36} color="#675074" />
                         </TouchableOpacity> */}
-                        <Icon style={[styles.account]} name="account-circle" size={28} color="#675074" />                                
+                        <Icon style={[styles.account]} name="account-circle" size={28} color="#856894" />                                
                         <Text style={[styles.profile]}>Perfil</Text>
                     </View>
                     <View style={[styles.headericons, styles.headerright]}>                            
                         <TouchableOpacity style={[styles.effecticons]} onPress={navigationToConfig}>
-                            <IconFeat style={[styles.settings]} name="settings" size={25} color="#675074" /> 
+                            <IconFeat style={[styles.settings]} name="settings" size={25} color="#856894" /> 
                         </TouchableOpacity>
                     </View>                        
                 </View>    

@@ -6,6 +6,8 @@ Icon.loadFont();
 IconFeat.loadFont();
 import { Text, View, TouchableOpacity } from 'react-native';
 
+import { RankingList2, TableList } from '../../componentes/AppComponents';
+
 import styles from './style';
 
 export default function Ranking () {
@@ -16,24 +18,24 @@ export default function Ranking () {
     }
 
     return (
-        <View style={[styles.container]}>
-            <View style={styles.box, styles.box1}>
-                <View style={styles.headericons}>
-                    <View style={styles.headerleft}>
-                        {/* <TouchableOpacity style={styles.effecticons} onPress={() => {}}>
-                            <Icon style={[styles.menu]} name="menu" size={36} color="#675074" />
-                        </TouchableOpacity> */}
-                        <Icon style={styles.account} name="account-circle" size={28} color="#675074" />                                
-                        <Text style={styles.profile}>Ranking</Text>
+            <View style={styles.container}>
+                <View style={styles.box1}>
+                    <View style={styles.headericons}>
+                        <View style={styles.headerleft}>
+                            <Icon style={styles.account} name="account-circle" size={28} color="#856894" />                                
+                            <Text style={styles.profile}>Ranking</Text>
+                        </View>
+                        <View style={styles.headerright}>                            
+                            <TouchableOpacity style={styles.effecticons} onPress={navigationToConfig}>
+                                <IconFeat style={styles.settings} name="settings" size={25} color="#856894" /> 
+                            </TouchableOpacity>
+                        </View>
                     </View>
-                    <View style={[styles.headerright]}>                            
-                        <TouchableOpacity style={styles.effecticons} onPress={navigationToConfig}>
-                            <IconFeat style={styles.settings} name="settings" size={25} color="#675074" /> 
-                        </TouchableOpacity>
-                    </View>                        
+                </View>
+                
+                <View style={styles.box2}>
+                    <TableList />
                 </View>
             </View>
-        </View>
-        
     );
 }
