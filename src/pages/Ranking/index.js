@@ -4,9 +4,9 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import IconFeat from 'react-native-vector-icons/Feather';
 Icon.loadFont();
 IconFeat.loadFont();
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity, Button } from 'react-native';
 
-import { RankingList2, TableList } from '../../componentes/AppComponents';
+import { TableList } from '../../componentes/AppComponents';
 
 import styles from './style';
 
@@ -39,3 +39,5 @@ export default function Ranking () {
             </View>
     );
 }
+
+//daniel.almeida@uniceub.br - Daniel API

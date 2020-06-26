@@ -2,10 +2,11 @@ import { StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 
 export default StyleSheet.create({
+
     container: {
         flex: 1,
         paddingHorizontal: 24,
-        paddingTop: Constants.statusBarHeight + 20,
+        paddingTop: Constants.statusBarHeight ,
     },
 
     header: {
@@ -26,7 +27,7 @@ export default StyleSheet.create({
     title: {
         fontSize: 30,
         marginBottom: 16,
-        marginTop: 48,
+        marginTop: 5,
         color: '#13131a',
         fontWeight: 'bold'
     },

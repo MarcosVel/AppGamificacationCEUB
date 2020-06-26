@@ -10,22 +10,26 @@ export default StyleSheet.create({
         flexDirection: 'column',
     },
     box: {
-        flex: 2.9,
+        flex: 1,    
         //height: boxHeight
     },
     //header 
     box1: { 
-        flex: 1, 
+        height: '25%', 
         backgroundColor: '#220536', 
+        justifyContent: 'center',
+        borderBottomWidth: 2,
+        borderBottomColor: '#F0CC25',
     },        
 
     //content 
-    box2: { 
-        flex: 9, 
-        backgroundColor: '#FFF',
-    },
+    // box2: { 
+    //     flex: 9, 
+    //     backgroundColor: '#FFF',
+    // },
 
     boxConquitas: {
+        height: '75%',
         paddingHorizontal: 24,            
     },
 
@@ -34,10 +38,11 @@ export default StyleSheet.create({
     //CRIADO POR NÓS
     headericons: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginTop: 2,  
-        marginLeft: 1,
-        marginRight: 1, 
+        justifyContent: 'space-between',          
+        marginLeft: '0.5%',
+        marginRight: '0.5%', 
+        marginTop: -5,
+        
     },
     
     headerleft: {
@@ -79,8 +84,8 @@ export default StyleSheet.create({
 
     viewProfile: {        
         flexDirection: 'row',
-        marginTop: 17,
-        marginLeft: 20,
+        marginTop: '3%',
+        marginLeft: 25,
     },
 
     descProfile: {      
@@ -94,14 +99,14 @@ export default StyleSheet.create({
         fontFamily: 'Roboto',
         color: '#fff',
         //textAlign: 'right',
-        marginLeft: 15,
+        marginLeft: 16,
     },   
     cursoProfile: {
         fontSize: 15,
         fontFamily: 'Roboto',
         color: '#737380',
         //textAlign: 'right',
-        marginLeft: 15,
+        marginLeft: 16,
     }, 
 
     imgperfil: {
@@ -134,7 +139,7 @@ export default StyleSheet.create({
     
     //ESTILO FLATLIST
     incidentList: {            
-        paddingTop: 30,
+        paddingTop: 25,
     },
 
     incident: {

@@ -28,7 +28,7 @@ export default function TelaLogin () {
     }
 
     function navigationToEntrar() {     //função para navegação para navegar entre as páginas (declarado lá no botão entrar);
-        navigation.navigate('Perfil');
+        navigation.navigate('Perfil' );
     }
 
         //CRIANDO VALOR DA ANIMAÇÃO

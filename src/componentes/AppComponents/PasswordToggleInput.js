@@ -5,7 +5,7 @@ Icon.loadFont();
 
 import styles from './../../pages/TelaLogin/style';
 
-export default  class PasswordToggleInput extends React.Component {
+export default class PasswordToggleInput extends React.Component {
 
     constructor(props) {
         super(props);

@@ -38,24 +38,24 @@ export default function DashboardsRoutes() {
 				<Icon name="star" color={color} size={23} />
 			),
 			}}/> */}
-			<Tab.Screen name="Desafios" component={Desafios} options={{
+			{/* <Tab.Screen name="Desafios" component={Desafios} options={{
 			tabBarLabel: 'Desafios',
 			tabBarIcon: ({ color, size }) => (
 				<IconFeat name="target" color={color} size={22} />
 			),
-			}}/>
+			}}/> */}
 			<Tab.Screen name="Ranking" component={Ranking} options={{
 			tabBarLabel: 'Ranking',
 			tabBarIcon: ({ color, size }) => (
 				<IconFont name="trophy" color={color} size={22} />
 			),
 			}}/>
-			<Tab.Screen name="Ticket" component={Ticket} options={{
+			{/* <Tab.Screen name="Ticket" component={Ticket} options={{
 			tabBarLabel: 'Ticket',
 			tabBarIcon: ({ color, size }) => (
 				<IconFont name="ticket" color={color} size={22} />
 			),
-			}}/>
+			}}/> */}
 			<Tab.Screen name="Perfil" component={Perfil} options={{
 			tabBarLabel: 'Perfil',
 			tabBarIcon: ({ color, size }) => (

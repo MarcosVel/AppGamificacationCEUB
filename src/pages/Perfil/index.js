@@ -14,65 +14,71 @@ import styles from './style';
 // const boxCount = 2; 
 // const boxHeight = height / boxCount;
 
-export default function Perfil () {
+export default function Perfil() {
 
     const navigation = useNavigation();
-        
+
     function navigationToConfig() {     //função para navegação para navegar entre as páginas (declarado lá no botão entrar);
-         navigation.navigate('Configuracoes');
+        navigation.navigate('Configuracoes');
     }
 
-    return ( 
+    return (
+        // <Header
+        //     placement="left"
+        //     leftComponent={{ icon: 'menu', color: '#fff' }}
+        //     centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+        //     rightComponent={{ icon: 'home', color: '#fff' }}
+        // />
+
         <View style={[styles.container]}>
-            <View style={[styles.box, styles.box1]}>    
+
+            <View style={[styles.box1]}>
                 <View style={[styles.headericons]}>
-                    <View style={[styles.headericons, styles.headerleft]}>
+                    <View style={[styles.headerleft]}>
                         {/* <TouchableOpacity style={styles.effecticons} onPress={() => {}}>
                             <Icon style={[styles.menu]} name="menu" size={36} color="#675074" />
                         </TouchableOpacity> */}
-                        <Icon style={[styles.account]} name="account-circle" size={28} color="#856894" />                                
+                        <Icon style={[styles.account]} name="account-circle" size={28} color="#856894" />
                         <Text style={[styles.profile]}>Perfil</Text>
                     </View>
-                    <View style={[styles.headericons, styles.headerright]}>                            
+                    <View style={[styles.headerright]}>
                         <TouchableOpacity style={[styles.effecticons]} onPress={navigationToConfig}>
-                            <IconFeat style={[styles.settings]} name="settings" size={25} color="#856894" /> 
+                            <IconFeat style={[styles.settings]} name="settings" size={25} color="#856894" />
                         </TouchableOpacity>
-                    </View>                        
-                </View>    
-                <View style={[styles.viewProfile]}>                        
-                    <Image source={FotoStuart} style={[styles.imgperfil]}/>
+                    </View>
+                </View>
+                <View style={[styles.viewProfile]}>
+                    <Image source={FotoStuart} style={[styles.imgperfil]} />
                     <View style={[styles.descProfile]}>
                         <Text style={[styles.nameProfile]}>Stuart Little</Text>
                         <Text style={[styles.cursoProfile]}>Análise e Desenvolvimento de Sistemas</Text>
                     </View>
-                </View>                  
+                </View>
             </View>
-            <View style={[styles.box, styles.boxConquitas]}>
-                {/* <ScrollView scrollEventThrottle={16} showsVerticalScrollIndicator={false}>                         */}
-                    <FlatList
-                        style={styles.incidentList}
-                        showsVerticalScrollIndicator={false}
-                        contentContainerStyle={{ paddingBottom: 40}}
-                        data={[1, 2, 3, 4, 5]}
-                        keyExtractor={incident => String(incident) }
-                        renderItem={() => (
-                            <View style={styles.incident}>
-                                <Text style={styles.incidentProperty}>CONQUISTA:</Text>
-                                <Text style={styles.incidentValue}>Rato exemplar</Text>
+            <View style={[styles.boxConquitas]}>
+                <FlatList
+                    style={styles.incidentList}
+                    showsVerticalScrollIndicator={false}
+                    contentContainerStyle={{ paddingBottom: 40 }}
+                    data={[1, 2, 3, 4, 5]}
+                    keyExtractor={incident => String(incident)}
+                    renderItem={() => (
+                        <View style={styles.incident}>
+                            <Text style={styles.incidentProperty}>CONQUISTA:</Text>
+                            <Text style={styles.incidentValue}>Rato exemplar</Text>
 
-                                <Text style={styles.incidentProperty}>DESCRIÇÃO:</Text>
-                                <Text style={styles.incidentValue}>Parabêns você está fechando seu semestre com todas as notas SS.</Text>
+                            <Text style={styles.incidentProperty}>DESCRIÇÃO:</Text>
+                            <Text style={styles.incidentValue}>Parabêns você está fechando seu semestre com todas as notas SS.</Text>
 
-                                <TouchableOpacity style={styles.detailsButton} onPress={() => {}}>
-                                    <Text style={styles.detailsButtonText}>Ver emblema</Text>
-                                    <IconFeat name="star" size={16} color="#B51D9E" />
-                                </TouchableOpacity>
-                            </View> 
-                        )}                    
-                    />                    
-                {/* </ScrollView> */}
+                            <TouchableOpacity style={styles.detailsButton} onPress={() => { }}>
+                                <Text style={styles.detailsButtonText}>Ver emblema</Text>
+                                <IconFeat name="star" size={16} color="#B51D9E" />
+                            </TouchableOpacity>
+                        </View>
+                    )}
+                />
             </View>
-            
+
         </View>
     );
 }
