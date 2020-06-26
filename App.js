@@ -13,7 +13,7 @@ export default class App extends Component {
         axios.post(url,
         {
         "idOperacao": 1,
-        "ClientKey": "R0FNSUZJQ0FUSU9OOitrNldxSlZJcnE3S3A4S0I4RU42MkVoWE85eWQyU2xnek5wS0VYZUt0Um89"
+        "ClientKey": "{CHAVE DE ACESSO}"
         })
             // data
             // .then(function(response){ 
