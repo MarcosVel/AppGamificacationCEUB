@@ -8,7 +8,7 @@ import axios from 'axios';
 export default class App extends Component {
    
     componentDidMount() {
-        const url = 'https://servicos.uniceub.br/api/sistema/passaporte'
+        const url = 'URL DE ACESSO'
         
         axios.post(url,
         {
