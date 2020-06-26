@@ -8,12 +8,12 @@ import axios from 'axios';
 export default class App extends Component {
    
     componentDidMount() {
-        const url = 'https://servicos.uniceub.br/api/sistema/passaporte'
+        const url = 'URL DE ACESSO'
         
         axios.post(url,
         {
         "idOperacao": 1,
-        "ClientKey": "R0FNSUZJQ0FUSU9OOitrNldxSlZJcnE3S3A4S0I4RU42MkVoWE85eWQyU2xnek5wS0VYZUt0Um89"
+        "ClientKey": "{CHAVE DE ACESSO}"
         })
             // data
             // .then(function(response){ 
