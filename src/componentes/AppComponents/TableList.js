@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, ScrollView, TouchableOpacity, Text } from 'react-native';
+import { StyleSheet, View, ScrollView, TouchableOpacity, Text, ImageStore } from 'react-native';
 import { Table, TableWrapper, Row, Col, Rows } from 'react-native-table-component';
+
+import Image from '../../assets/Stuart-Little.jpg';
 
 export default class TableList extends Component {
     constructor(props) {
@@ -49,15 +51,15 @@ export default class TableList extends Component {
   render() {
     const state = this.state;
     const tableData = [];
-    for (let i = 0; i < 15; i += 1) {
+    for (let i = 1; i <= 15; i += 1) {
         const rowData = [
-            ('Imagem'),
-            ('Lucas Rodrigues'),
+            ('Img'),
+            ('Stuart Little'),
             ('10000pts'),
-            (1)
+            //(1)
         ];
-        for (let j = 0; j < 4; j += 1) {  
-        rowData.push(`${i}${j}`);
+        for (let j = 1; j < 10; j += 1) {  
+        rowData.push(`${i}`);
         //rowData.push(`${tableData}`);
         }
         tableData.push(rowData);

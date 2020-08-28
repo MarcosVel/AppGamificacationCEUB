@@ -10,6 +10,7 @@ import Conquista from '../pages/Conquista';
 import Desafios from '../pages/Desafios';
 import Ranking from '../pages/Ranking';
 import Ticket from '../pages/Ticket';
+import { HeaderTitle } from '@react-navigation/stack';
 
 
 const Tab = createMaterialBottomTabNavigator();
@@ -50,12 +51,12 @@ export default function DashboardsRoutes() {
 				<IconFont name="trophy" color={color} size={22} />
 			),
 			}}/>
-			{/* <Tab.Screen name="Ticket" component={Ticket} options={{
+			<Tab.Screen name="Ticket" component={Ticket} options={{
 			tabBarLabel: 'Ticket',
 			tabBarIcon: ({ color, size }) => (
 				<IconFont name="ticket" color={color} size={22} />
 			),
-			}}/> */}
+			}}/>
 			<Tab.Screen name="Perfil" component={Perfil} options={{
 			tabBarLabel: 'Perfil',
 			tabBarIcon: ({ color, size }) => (

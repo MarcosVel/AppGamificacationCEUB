@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 Icon.loadFont();
 
 import styles from './../../pages/TelaLogin/style';
 
-export default class PasswordToggleInput extends React.Component {
+export default class PasswordToggleInput extends Component {
 
     constructor(props) {
         super(props);

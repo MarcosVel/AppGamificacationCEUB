@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import IconCom from 'react-native-vector-icons/MaterialCommunityIcons';
 Icon.loadFont();
@@ -22,11 +23,17 @@ export default function Configuracoes() {
     const [isEnabled, setIsEnabled] = useState(true);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
+    const navigation = useNavigation();
+
+    function navigationToLogOut() {     //função para navegação para pag details;
+        navigation.navigate('TelaLogin');
+    }
+
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView
                 style={styles.scrollView}
-                contentContainerStyle={{ paddingBottom: 150 }}
+                contentContainerStyle={{ paddingBottom: 140 }}
                 // decelerationRate={1}
                 showsVerticalScrollIndicator={false}>
                 {/* <Text style={styles.textPage}>Configurações ⚙</Text> */}
@@ -93,7 +100,7 @@ export default function Configuracoes() {
                     <Text style={styles.labeldivMore}>Política de Privacidade</Text>
                 </TouchableOpacity>
 
-                <TouchableHighlight style={styles.btnSubmit} underlayColor={'#897a91'} onPress={() => { }}>
+                <TouchableHighlight style={styles.btnSubmit} underlayColor={'#897a91'} onPress={navigationToLogOut}>
                     <Text style={styles.submitText}>LOG OUT</Text>
                 </TouchableHighlight>
                 <Text style={styles.copyright}>© 2020 UniCEUB - Equipe ePlay</Text>

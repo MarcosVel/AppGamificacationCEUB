@@ -12,12 +12,15 @@ import {
     StatusBar,
     ScrollView
 } from 'react-native';
+import axios from 'axios';
 
 import logoImg from '../../assets/logoicon3.png';
 
 import styles from './style';
 
 import { PasswordToggleInput } from '../../componentes/AppComponents';
+
+import { Passport } from '../../componentes/AppComponents';
 
 export default function TelaLogin () {
     const navigation = useNavigation();
@@ -28,7 +31,59 @@ export default function TelaLogin () {
     }
 
     function navigationToEntrar() {     //função para navegação para navegar entre as páginas (declarado lá no botão entrar);
-        navigation.navigate('Perfil' );
+        //Conexão com a API com o jogador para conseguir colocar os dados
+
+        // const url = 'https://eaplay.api.uniceub.br/api/game/jogador'
+        
+        // const config = {
+        //  headers: { Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiZWFwbGF5LmFwaS51bmljZXViLmJyIiwibmFtZWlkIjoiR0FNSUZJQ0FUSU9OIiwibmJmIjoxNTk0MjM1NTc1LCJleHAiOjE1OTQzMjE5NzUsImlhdCI6MTU5NDIzNTU3NSwiaXNzIjoiaHR0cHM6Ly9zZXJ2aWNvcy51bmljZXViLmJyLyJ9.KkXAop_0ok3xxRKZtaaritXtTg2T6rNQCgH8gfUIfm8` }
+        // };
+
+
+        // axios.post(url,
+        // {
+        //     "idOperacao": 3,
+        //     "RA": "21903275",
+        //     "SENHA": "Lucas14092000",
+        // },
+        // config
+        // )
+        
+        // .then((response) => {
+        //     // this._storeData (
+        //     //     'Nome',
+        //     //     response.data.data.Nome
+        //     //     );
+        //     console.log(response.data.data)
+            
+        // })
+
+        // .catch(function (error) {
+        //     console.log(error);
+        // })
+
+
+
+        // PARTE 2
+
+        // console.log(await this._retrieveData('Nome'));
+
+        // const url = 'https://eaplay.api.uniceub.br/api/game/jogador'
+        
+        // axios.post(url,
+        // {
+        // "idOperacao": 3,
+        // "RA": "21903275",
+        // "SENHA": "Lucas14092000" 
+        // })
+        // .then(function (response) {
+        //     console.log(response);
+        // })
+        // .catch(function (error) {
+        //     console.log(error);
+        // });
+        
+        navigation.navigate('Perfil');
     }
 
         //CRIANDO VALOR DA ANIMAÇÃO

@@ -3,29 +3,60 @@ import Routes from './src/routes';
 import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
+import { AsyncStorage } from 'react-native';
 import axios from 'axios';
+import { _storeData , _retrieveData } from './src/helpers/LocalStorage';
 
 export default class App extends Component {
-   
-    componentDidMount() {
-        const url = 'URL DE ACESSO'
+    
+    async componentDidMount() {
+        const url = 'https://servicos.uniceub.br/api/sistema/passaporte'
         
         axios.post(url,
         {
         "idOperacao": 1,
-        "ClientKey": "{CHAVE DE ACESSO}"
+        "ClientKey": "R0FNSUZJQ0FUSU9OOitrNldxSlZJcnE3S3A4S0I4RU42MkVoWE85eWQyU2xnek5wS0VYZUt0Um89"
         })
-            // data
-            // .then(function(response){ 
-            //     console.log(response)
-            // })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            })
+        // .then((response) => {
+        //     console.log(response.data.data.Credencial);
+        // })
+        .then((response) => {
+            this._storeData (
+                'Credencial',
+                response.data.data.Credencial
+                );
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+        //console.log("Teste");
+        console.log(await this._retrieveData('Credencial'));
     };  
+
+    _storeData = async (key, valor) => {
+        try {
+          await AsyncStorage.setItem(
+            key,
+            valor
+          );
+        } catch (error) {
+            console.log(error);
+          // Error saving data
+        }
+    };
+
+    _retrieveData = async (key) => {
+        var value = "";
+        
+        try {
+            value = await AsyncStorage.getItem(key);
+        } catch (error) {
+            console.log(error);
+          // Error retrieving data
+        }
+        return value;
+    };
+
         
     render() {
         return (
