@@ -6,6 +6,7 @@ Icon.loadFont();
 IconFeat.loadFont();
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StyleSheet, View, Dimensions, Text, Image, TouchableOpacity, ScrollView, FlatList } from 'react-native';
+import Header from '../../componentes/Header';
 
 import FotoStuart from '../../assets/Stuart-Little.jpg';
 import styles from './style';
@@ -18,35 +19,17 @@ export default function Perfil() {
 
     const navigation = useNavigation();
 
+    const title = 'Perfil';
+
     function navigationToConfig() {     //função para navegação para navegar entre as páginas (declarado lá no botão entrar);
         navigation.navigate('Configuracoes');
     }
 
     return (
-        // <Header
-        //     placement="left"
-        //     leftComponent={{ icon: 'menu', color: '#fff' }}
-        //     centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
-        //     rightComponent={{ icon: 'home', color: '#fff' }}
-        // />
-
-        <View style={[styles.container]}>
-
+        
+        <>
+            <Header title={title} />
             <View style={[styles.box1]}>
-                <View style={[styles.headericons]}>
-                    <View style={[styles.headerleft]}>
-                        {/* <TouchableOpacity style={styles.effecticons} onPress={() => {}}>
-                            <Icon style={[styles.menu]} name="menu" size={36} color="#675074" />
-                        </TouchableOpacity> */}
-                        <Icon style={[styles.account]} name="account-circle" size={28} color="#856894" />
-                        <Text style={[styles.profile]}>Perfil</Text>
-                    </View>
-                    <View style={[styles.headerright]}>
-                        <TouchableOpacity style={[styles.effecticons]} onPress={navigationToConfig}>
-                            <IconFeat style={[styles.settings]} name="settings" size={25} color="#856894" />
-                        </TouchableOpacity>
-                    </View>
-                </View>
                 <View style={[styles.viewProfile]}>
                     <Image source={FotoStuart} style={[styles.imgperfil]} />
                     <View style={[styles.descProfile]}>
@@ -79,6 +62,6 @@ export default function Perfil() {
                 />
             </View>
 
-        </View>
+        </>
     );
 }

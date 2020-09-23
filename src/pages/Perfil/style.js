@@ -7,70 +7,24 @@ const { height } = Dimensions.get('window');
 export default StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: 'column',
+        //flexDirection: 'column',
     },
     box: {
         flex: 1,    
         //height: boxHeight
     },
     //header 
-    box1: { 
-        height: '25%', 
+    box1: {
         backgroundColor: '#220536', 
         justifyContent: 'center',
         borderBottomWidth: 2,
         borderBottomColor: '#F0CC25',
-    },        
-
-    //content 
-    // box2: { 
-    //     flex: 9, 
-    //     backgroundColor: '#FFF',
-    // },
+        paddingBottom: 11,
+    },
 
     boxConquitas: {
         height: '75%',
         paddingHorizontal: 24,            
-    },
-
-
-
-    //CRIADO POR NÓS
-    headericons: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',          
-        marginLeft: '0.5%',
-        marginRight: '0.5%', 
-        marginTop: -5,
-        
-    },
-    
-    headerleft: {
-        flexDirection: 'row',         
-        marginLeft: 5,
-    },
-
-    headerright: {
-        flexDirection: 'row',         
-        marginRight: 5,
-    },
-
-    //icon bars
-    menu: {            
-        marginLeft: 12,
-        marginTop: 0,     
-    },
-
-    //icon perfil
-    account: {       
-        marginLeft: 15,
-        marginTop: 4,     
-    },
-
-    //icon engrenagem
-    settings: {       
-        marginRight: 13,
-        marginTop: 2.2,     
     },
 
     //escrito Perfil
@@ -84,7 +38,7 @@ export default StyleSheet.create({
 
     viewProfile: {        
         flexDirection: 'row',
-        marginTop: '3%',
+        //marginTop: '3%',
         marginLeft: 25,
     },
 

@@ -33,6 +33,8 @@ export default function DashboardsRoutes() {
 				<IconFont name="newspaper-o" color={color} size={21} />
 			),
 			}}/>
+
+			{/* Icones da navegação na barra inferior */}
 			{/* <Tab.Screen name="Conquista" component={Conquista} options={{
 			tabBarLabel: 'Conquista',
 			tabBarIcon: ({ color, size }) => (
